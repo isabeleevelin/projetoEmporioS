@@ -1,0 +1,32 @@
+.conteudo {
+    width: 70%;
+    height: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background-color: black;
+    float: right;
+    background-image: url('/assets/fundo2.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.example-card {
+    max-width: 600px;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 5%;
+    background-color: rgba(188, 204, 224, 0.671);
+}
+
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+
+.cardAdmin {
+    max-width: 600px;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 5%;
+    background-color: rgba(188, 204, 224, 0.671);
+}

@@ -1,0 +1,11 @@
+#btMenuLateral {
+    width: 250px;
+    height: 250px;
+    background-image: url('/assets/fundoMenu.png');
+    background-repeat: no-repeat space;
+    background-position: center;
+    background-size: 250px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}

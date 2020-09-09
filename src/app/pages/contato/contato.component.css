@@ -1,0 +1,40 @@
+.conteudoContato {
+    float: right;
+    width: 70%;
+    height: 100%;
+}
+
+.example-card {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 20%;
+    max-width: 70%;
+    height: auto;
+    background-image: url('/assets/emporiofundo.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 200px 200px;
+    background-color: rgba(15, 82, 228, 0.233);
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+mat-card-header {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+mat-card-content {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
