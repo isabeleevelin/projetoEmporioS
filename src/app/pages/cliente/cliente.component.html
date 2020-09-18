@@ -1,177 +1,40 @@
-<app-menuhorizontal></app-menuhorizontal>
-<!--<mat-tab-group mat-align-tabs="center" class="tab" [selectedIndex]="selected.value" (selectedIndexChange)="selected.setValue($event)">
-    <mat-tab label="Bebidas">
+<app-submenu></app-submenu>
+<div class="b">
 
-        <mat-accordion>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        Agua
-                    </mat-panel-title>
-                    <mat-panel-description>
-                        Tipos
-                    </mat-panel-description>
-                </mat-expansion-panel-header>
-                <mat-selection-list #water>
-                    <mat-list-option *ngFor="let water of typesOfWater">
-                        {{water}}
-                    </mat-list-option>
-                </mat-selection-list>
-
-                <p>
-                    Opções selecionadas: {{water.selectedOptions.selected.length}}
-                </p>
-            </mat-expansion-panel>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        Cerveja
-                    </mat-panel-title>
-                    <mat-panel-description>
-                        Tipos
-                    </mat-panel-description>
-                </mat-expansion-panel-header>
-                <mat-selection-list #beer>
-                    <mat-list-option *ngFor="let beer of typesOfbeer">
-                        {{beer}}
-                    </mat-list-option>
-                </mat-selection-list>
-
-                <p>
-                    Opções selecionadas: {{beer.selectedOptions.selected.length}}
-                </p>
-            </mat-expansion-panel>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        Refrigerante
-                    </mat-panel-title>
-                    <mat-panel-description>
-                        Tipos
-                    </mat-panel-description>
-                </mat-expansion-panel-header>
-                <mat-selection-list #refri>
-                    <mat-list-option *ngFor="let refri of typesOfrefri">
-                        {{refri}}
-                    </mat-list-option>
-                </mat-selection-list>
-
-                <p>
-                    Opções selecionadas: {{refri.selectedOptions.selected.length}}
-                </p>
-            </mat-expansion-panel>
-        </mat-accordion>
-
-    </mat-tab>
-    <mat-tab label="Aperitivos">
-
-
-    </mat-tab>
-
-</mat-tab-group>
--->
-<!--<mat-horizontal-stepper labelPosition="bottom" #stepper>
-
-
-    <mat-step>
-        <form>
-            <ng-template matStepLabel>Escolha suas bebidas</ng-template>
-            <mat-accordion>
-                <mat-expansion-panel>
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>
-                            Agua
-                        </mat-panel-title>
-                        <mat-panel-description>
-                            Tipos
-                        </mat-panel-description>
-                    </mat-expansion-panel-header>
-                    <mat-selection-list #water>
-                        <mat-list-option *ngFor="let water of typesOfWater">
-                            {{water}}
-                        </mat-list-option>
-                    </mat-selection-list>
-
-                    <p>
-                        Opções selecionadas: {{water.selectedOptions.selected.length}}
-                    </p>
-                </mat-expansion-panel>
-                <mat-expansion-panel>
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>
-                            Cerveja
-                        </mat-panel-title>
-                        <mat-panel-description>
-                            Tipos
-                        </mat-panel-description>
-                    </mat-expansion-panel-header>
-                    <mat-selection-list #b (selectionChange)="onChange($event, b.selectedOptions)">
-                        <mat-list-option *ngFor="let beer of typesOfbeer" [value]="beer">
-                            {{beer}}
-                        </mat-list-option>
-                    </mat-selection-list>
-
-                    <p>
-                        Opções selecionadas: {{b.selectedOptions.selected.length}}
-                    </p>
-                </mat-expansion-panel>
-                <mat-expansion-panel>
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>
-                            Refrigerante
-                        </mat-panel-title>
-                        <mat-panel-description>
-                            Tipos
-                        </mat-panel-description>
-                    </mat-expansion-panel-header>
-                    <mat-selection-list #refrigerante (selectionChange)="onChange($event, refrigerante.selectedOptions)">
-                        <mat-list-option *ngFor="let refri of typesOfrefri" [value]="refri">
-                            {{refri}}
-                        </mat-list-option>
-                    </mat-selection-list>
-
-                    <p>
-                        Opções selecionadas: {{refrigerante.selectedOptions.selected.length}}
-                    </p>
-                </mat-expansion-panel>
-            </mat-accordion>
-
-            <div>
-                <button mat-button matStepperNext>Next</button>
-            </div>
-        </form>
-    </mat-step>
-    <mat-step optional>
-        <form>
-            <ng-template matStepLabel>Aperitivos</ng-template>
-            <mat-selection-list #eats (selectionChange)="onChange($event, eats.selectedOptions)">
-                <mat-list-option *ngFor="let eat of typesOfeat" [value]="eat">
-                    {{eat}}
+    <mat-selection-list #bebidas (selectionChange)="Selecionado($event,bebidas.selectedOptions)">
+        <!--<h1>BEBIDAS</h1>
+        <div class="conteudoBebida">
+            <div class="bebida1">
+                <h2>Refrigerantes</h2>
+                <mat-list-option *ngFor="let refri of   typesOfrefri" [value]="refri">
+                    {{refri}}
                 </mat-list-option>
-            </mat-selection-list>
-
-            <p>
-                Options selected: {{eats.selectedOptions.selected.length}}
-            </p>
-
-            <div>
-                <button mat-button matStepperPrevious>Back</button>
-                <button mat-button matStepperNext>Next</button>
             </div>
-        </form>
-    </mat-step>
-    <mat-step>
-        <ng-template matStepLabel>Lista de pedidos</ng-template>
-        <p>Finalizar</p>
-        <p *ngFor="let e of selecionado">
-            {{e}}
-        </p>
-        <div>
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button (click)="stepper.reset()">Reset</button>
-        </div>
-    </mat-step>
-</mat-horizontal-stepper>-->
-<div>
 
+            <div class="bebida2">
+                <h2>Cervejas</h2>
+                <mat-list-option *ngFor="let  cerveja of   typesOfbeer" [value]="cerveja">
+                    {{cerveja}}
+                </mat-list-option>
+            </div>
+
+            <div class="bebida2">
+                <h2>Água</h2>
+                <mat-list-option *ngFor="let  agua of   typesOfWater" [value]="agua">
+                    {{agua}}
+                </mat-list-option>
+            </div>
+        </div>
+
+        <mat-divider></mat-divider>
+    -->
+        <div class="conteudoComida">
+            <h1>APERITIVOS</h1>
+            <mat-list-option *ngFor="let  eat of typesOfeat" [value]="eat.nome">
+                {{eat.nome}}
+            </mat-list-option>
+            <button mat-flat-button id="btOK">OK</button>
+        </div>
+
+    </mat-selection-list>
 </div>

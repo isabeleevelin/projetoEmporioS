@@ -1,34 +1,37 @@
-    .tab {
-        background-color: rgba(194, 175, 3, 0.753);
-        padding-left: 10px;
-        width: 50%;
-        display: flex;
-        margin: 0 auto;
-        padding-bottom: 3%;
-    }
-    
-    mat-accordion {
-        margin-top: 3%;
-    }
-    
-    .subtab1 {
-        width: 40%;
-    }
-    
-    .example-action-buttons {
-        padding-bottom: 20px;
-    }
-    
-    .example-headers-align .mat-expansion-panel-header-title,
-    .example-headers-align .mat-expansion-panel-header-description {
-        flex-basis: 0;
-    }
-    
-    .example-headers-align .mat-expansion-panel-header-description {
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .example-headers-align .mat-form-field+.mat-form-field {
-        margin-left: 8px;
-    }
+   .b {
+       background-color: darkgoldenrod;
+       width: 100%;
+       height: 100%;
+       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       text-align: center;
+       border-color: black;
+       border: 2px blue dashed;
+   }
+   
+   .bebida1 {
+       float: left;
+       width: 30%;
+       height: auto;
+       margin-left: 2%;
+       border: 2px blue dashed;
+   }
+   
+   .bebida2 {
+       float: right;
+       width: 33%;
+       height: auto;
+       border: 2px blue dashed;
+   }
+   
+   .conteudoComida {
+       width: 50%;
+       height: auto;
+       margin-top: 20%;
+       text-align: center;
+       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       border: 2px blue dashed;
+   }
+   
+   #btOK {
+       width: 100px;
+   }

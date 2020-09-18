@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {HttpModule} from '@angular/http';
+import {ConfigService} from './Services/config.service';
+import {CardapioService} from './Services/cardapio.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +29,9 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatStepperModule} from '@angular/material/stepper';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { SubmenuComponent } from './submenu/submenu.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +43,8 @@ import {MatStepperModule} from '@angular/material/stepper';
     ButtonLogoComponent,
     ClienteComponent,
     AdmComponent,
-    MenuhorizontalComponent
+    MenuhorizontalComponent,
+    SubmenuComponent
   ],
   imports: [
     BrowserModule,
@@ -52,14 +59,17 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatListModule,
     MatExpansionModule,
     MatCheckboxModule,
-MatFormFieldModule,
-FormsModule,
- ReactiveFormsModule,
- MatStepperModule
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatStepperModule,
+    MatGridListModule,
+    HttpModule,
+    HttpClientModule
 
     
   ],
-  providers: [],
+  providers: [ConfigService,CardapioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
